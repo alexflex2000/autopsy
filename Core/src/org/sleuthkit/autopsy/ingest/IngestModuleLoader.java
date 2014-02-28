@@ -66,6 +66,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.sleuthkit.autopsy.coreutils.MessageNotifyUtil;
+import org.sleuthkit.autopsy.ingest.python.PythonIngestModuleLoader;
+
 /**
  * Class responsible for discovery and loading ingest modules specified in
  * pipeline XML file. Maintains a singleton instance. Requires restart of
@@ -602,7 +604,7 @@ import org.sleuthkit.autopsy.coreutils.MessageNotifyUtil;
                 }
 
             }
-
+            
             if (modulesChanged) {
                 save();
                
@@ -839,8 +841,9 @@ import org.sleuthkit.autopsy.coreutils.MessageNotifyUtil;
 
         } //end instantiating modules in XML
 
-
-
+        // Instantiate ingest modules implemented with Python (Jython).
+        PythonIngestModuleLoader pythonModuleLoader = new PythonIngestModuleLoader();
+        filePipeline.addAll(pythonModuleLoader.getFileIngestModules());
     }
 
     /**
