@@ -17,12 +17,10 @@
  * limitations under the License.
  */
 
-package org.sleuthkit.autopsy.ingest.python;
+package org.sleuthkit.autopsy.ingest;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.sleuthkit.autopsy.ingest.IngestModuleAbstractFile;
-import org.sleuthkit.autopsy.ingest.IngestModuleDataSource;
 
 /**
  * RJCTODO
@@ -34,9 +32,9 @@ public class PythonIngestModuleLoader {
     public PythonIngestModuleLoader() {
         // RJCTODO: Replace this proof of concept code
         PythonIngestModuleFactory factory = PythonIngestModuleFactory.getInstance();
-        PythonIngestModule module = factory.createIngestModule("C:\\PythonIngestModules\\MakisuFileIngestModule.py");
+        PythonIngestModule module = factory.createIngestModule("C:\\PythonIngestModules\\SampleFileIngestModule.py");
         if (module instanceof PythonFileIngestModule) {
-            FileIngestModuleAdapter adapter = new FileIngestModuleAdapter((PythonFileIngestModule)module); 
+            PythonFileIngestModuleAdapter adapter = new PythonFileIngestModuleAdapter((PythonFileIngestModule)module); 
             fileIngestModules.add(adapter);
         }
     }

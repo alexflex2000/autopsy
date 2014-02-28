@@ -17,46 +17,11 @@
  * limitations under the License.
  */
 
-package org.sleuthkit.autopsy.ingest.python;
+package org.sleuthkit.autopsy.ingest;
 
 /**
  * RJCTODO
  */
-public interface PythonIngestModule {
-
-    /**
-     * RJCTODO
-     * @return 
-     */
-    String getName();
+public interface PythonDataSourceIngestModule  extends PythonIngestModule {
     
-    /**
-     * RJCTODO
-     * @return 
-     */
-    String getVersion();
-    
-    /**
-     * RJCTODO
-     * @return 
-     */
-    String getDescription();    
-
-    /**
-     * RJCTODO
-     * @return 
-     */
-    void init();
-
-    /**
-     * RJCTODO
-     * @return 
-     */
-    void complete();
-
-    /**
-     * RJCTODO
-     * @return 
-     */
-    void stop();   
 }

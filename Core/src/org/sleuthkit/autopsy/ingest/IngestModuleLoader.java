@@ -66,7 +66,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.sleuthkit.autopsy.coreutils.MessageNotifyUtil;
-import org.sleuthkit.autopsy.ingest.python.PythonIngestModuleLoader;
 
 /**
  * Class responsible for discovery and loading ingest modules specified in

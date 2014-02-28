@@ -17,21 +17,18 @@
  * limitations under the License.
  */
 
-package org.sleuthkit.autopsy.ingest.python;
+package org.sleuthkit.autopsy.ingest;
 
-import org.sleuthkit.autopsy.ingest.IngestModuleAbstractFile;
-import org.sleuthkit.autopsy.ingest.IngestModuleInit;
-import org.sleuthkit.autopsy.ingest.PipelineContext;
 import org.sleuthkit.datamodel.AbstractFile;
 
 /**
  * RJCTODO
  */
-class FileIngestModuleAdapter extends IngestModuleAbstractFile {
+class PythonFileIngestModuleAdapter extends IngestModuleAbstractFile {
 
     private PythonFileIngestModule pythonModule;
 
-    FileIngestModuleAdapter(PythonFileIngestModule pythonModule) {
+    PythonFileIngestModuleAdapter(PythonFileIngestModule pythonModule) {
         this.pythonModule = pythonModule;
     }
 

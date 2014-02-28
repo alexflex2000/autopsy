@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package org.sleuthkit.autopsy.ingest.python;
+package org.sleuthkit.autopsy.ingest;
 
 import org.openide.DialogDisplayer;
 import org.openide.NotifyDescriptor;
